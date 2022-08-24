@@ -1,0 +1,18 @@
+<p>Busque seu pokemon preferido</p>
+<form [formGroup]="pokeForm">
+  <mat-form-field appearance="fill">
+    <mat-label>pokes Group</mat-label>
+    <input type="text"
+           matInput
+           formControlName="pokeGroup"
+           required
+           [matAutocomplete]="autoGroup">
+      <mat-autocomplete #autoGroup="matAutocomplete">
+        <mat-optgroup *ngFor="let group of pokeGroupsOptions | async" [label]="group.letter">
+          <mat-option *ngFor="let name of group.names" [value]="name">
+            {{name}}
+          </mat-option>
+      </mat-optgroup>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

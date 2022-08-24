@@ -1,0 +1,10 @@
+<h2>Escolha seu pokemon</h2>
+<app-poke-complete [pokes]="pokes" (searchPokemon)="searchPokemons($event)"></app-poke-complete>
+<section class="poke-list">
+  <article class="poke-list-item" *ngFor="let poke of pokesShowed">
+    <app-poke-list-card [name]="poke.name" [coverImage]="poke.image" [id]="poke.id">
+    </app-poke-list-card>
+  </article>
+</section>
+
+

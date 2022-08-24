@@ -1,0 +1,6 @@
+
+<div class="poke-card" [@zoom]="mouseIn ? 'in': 'out'" (mouseover)="setMouseIn()" (mouseout)="setMouseOut()">
+  <img  [src]="coverImage" alt="Photo of a Shiba Inu">
+  <p>{{name}}</p>
+  <p>{{id}}</p>
+</div>
